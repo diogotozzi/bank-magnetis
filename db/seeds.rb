@@ -13,12 +13,12 @@ Account.create(
   ]
 )
 
-Fund.create(
+Transfer.create(
   [
-    {account_id: "1", qty: "10.00"},
-    {account_id: "1", qty: "7.20"},
-    {account_id: "2", qty: "5.00"},
-    {account_id: "2", qty: "9.00"},
-    {account_id: "2", qty: "-3.00"},
+    {from_account_id: "1", to_account_id: "1", qty: "10.00"},
+    {from_account_id: "1", to_account_id: "1", qty: "7.20"},
+    {from_account_id: "2", to_account_id: "2", qty: "5.00"},
+    {from_account_id: "2", to_account_id: "2", qty: "9.00"},
+    {from_account_id: "2", to_account_id: "1", qty: "3.00"},
   ]
 )

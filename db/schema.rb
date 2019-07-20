@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_20_222852) do
+ActiveRecord::Schema.define() do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,9 +21,9 @@ ActiveRecord::Schema.define(version: 2019_07_20_222852) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "funds", id: false, force: :cascade do |t|
-    t.integer "id", default: -> { "nextval('fund_id_seq'::regclass)" }
-    t.integer "account_id"
+  create_table "transfers", id: false, force: :cascade do |t|
+    t.integer "from_account_id"
+    t.integer "to_account_id"
     t.float "qty"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
