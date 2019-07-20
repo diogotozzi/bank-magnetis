@@ -14,8 +14,8 @@ services:
         - app-network
   database:
     image: postgres:11.4
-    volumes:
-      - ./tmp/db:/var/lib/postgresql/data
+    environment:
+      - PG_TRUST_LOCALNET=true
     networks:
         - app-network
 networks:
