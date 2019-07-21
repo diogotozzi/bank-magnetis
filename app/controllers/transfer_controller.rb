@@ -1,5 +1,5 @@
 class TransferController < ActionController::API
     def create
-      @account = Account.create(id: "1")
+      render status: :ok
     end
 end

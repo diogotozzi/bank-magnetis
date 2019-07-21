@@ -1,18 +1,13 @@
 class AccountController < ActionController::API
-    def show
-      account = Account.find(params[:id])
-      transfers_to = Transfer.where(to_account_id: params[:id])
-      transfers_from = Transfer.where(from_account_id: params[:id]).where.not(to_account_id: params[:id])
+  include FundConcern
+  rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
 
-      sum = 0
-      transfers_to.each do |fund|
-        sum += fund.qty
-      end
+  def show
+    account = Account.find(params[:id])
+    render :json => {:funds => funds(params[:id])}, status: :ok
+  end
 
-      transfers_from.each do |fund|
-        sum -= fund.qty
-      end
-
-      render :json => {:funds => sum}, status: :ok
-    end
+  def record_not_found
+    render :json => {:message => "account not found"}, status: :not_found
+  end
 end
