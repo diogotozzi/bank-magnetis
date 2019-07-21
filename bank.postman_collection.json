@@ -6,7 +6,67 @@
 	},
 	"item": [
 		{
-			"name": "http://localhost:3000/transfer",
+			"name": "Check account 2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "IlkyNjR5anlPeG1mWWVkYksi.eyJhbGciOiJIUzI1NiJ9.Tc9IQuUdQ7IaVWORuQOLIpG1emnTikIkzvDOfVnThNU"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/account/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"account",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check account 1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.IlkyNjR5anlPeG1mWWVkYksi.Tc9IQuUdQ7IaVWORuQOLIpG1emnTikIkzvDOfVnThNU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/account/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"account",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer 1 to 2",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -33,6 +93,11 @@
 							"key": "qty",
 							"value": "1",
 							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
 						}
 					]
 				},
@@ -51,7 +116,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/transfer two",
+			"name": "Transfer 2 to 1",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -102,7 +167,7 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/account",
+			"name": "Create account 3",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -111,7 +176,7 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:3000/account?account_id=001&name=John Doe&password=123456",
+					"raw": "http://localhost:3000/account?account_id=003&name=Mary Doe&password=123456",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -123,11 +188,11 @@
 					"query": [
 						{
 							"key": "account_id",
-							"value": "001"
+							"value": "003"
 						},
 						{
 							"key": "name",
-							"value": "John Doe"
+							"value": "Mary Doe"
 						},
 						{
 							"key": "password",
@@ -139,60 +204,56 @@
 			"response": []
 		},
 		{
-			"name": "http://localhost:3000/account/1",
+			"name": "Transfer 3 to 1",
 			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "token",
-						"value": "eyJhbGciOiJIUzI1NiJ9.IlkyNjR5anlPeG1mWWVkYksi.Tc9IQuUdQ7IaVWORuQOLIpG1emnTikIkzvDOfVnThNU",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"url": {
-					"raw": "http://localhost:3000/account/1",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"account",
-						"1"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "http://localhost:3000/account/2",
-			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [
 					{
 						"key": "token",
 						"type": "text",
-						"value": "IlkyNjR5anlPeG1mWWVkYksi.eyJhbGciOiJIUzI1NiJ9.Tc9IQuUdQ7IaVWORuQOLIpG1emnTikIkzvDOfVnThNU"
+						"value": "eyJhbGciOiJIUzI1NiJ9.ImdwWUNUZ3BmTEdYMUQ4c2Ui.HUA85yyO9TLMfGk36ZdxstdlVFGgIYbsX4fB5TyHRh8"
 					}
 				],
 				"body": {
-					"mode": "raw",
-					"raw": ""
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "from_account_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "to_account_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "qty",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/account/2",
+					"raw": "http://localhost:3000/transfer",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
-						"account",
-						"2"
+						"transfer"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
 					]
 				}
 			},
