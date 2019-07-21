@@ -1,6 +1,7 @@
 class AccountController < ApplicationController
   include FundConcern
   include JsonWebTokenConcern
+  include SecurityConcern
 
   before_action :authorize_request, except: :create
   rescue_from ActiveRecord::RecordNotFound, :with => :record_not_found
@@ -16,7 +17,7 @@ class AccountController < ApplicationController
     password = params[:password]
     token = encode(SecureRandom.alphanumeric)
 
-    Account.create({id: account_id, name: name, password: password, token: token })
+    Account.create({id: account_id, name: name, password: encrypt(password), token: token })
 
     render :json => {:token => token}, status: :created
   end
