@@ -1,0 +1,202 @@
+{
+	"info": {
+		"_postman_id": "842ec3e5-b566-49e0-a3dc-e8a6d0e62e20",
+		"name": "bank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/transfer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiJ9.IlkyNjR5anlPeG1mWWVkYksi.Tc9IQuUdQ7IaVWORuQOLIpG1emnTikIkzvDOfVnThNU"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "from_account_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "to_account_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "qty",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"transfer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/transfer two",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "IlkyNjR5anlPeG1mWWVkYksi.eyJhbGciOiJIUzI1NiJ9.Tc9IQuUdQ7IaVWORuQOLIpG1emnTikIkzvDOfVnThNU"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "from_account_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "to_account_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "qty",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"transfer"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/account?account_id=001&name=John Doe&password=123456",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"account"
+					],
+					"query": [
+						{
+							"key": "account_id",
+							"value": "001"
+						},
+						{
+							"key": "name",
+							"value": "John Doe"
+						},
+						{
+							"key": "password",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/account/1",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiJ9.IlkyNjR5anlPeG1mWWVkYksi.Tc9IQuUdQ7IaVWORuQOLIpG1emnTikIkzvDOfVnThNU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/account/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"account",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/account/2",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"type": "text",
+						"value": "IlkyNjR5anlPeG1mWWVkYksi.eyJhbGciOiJIUzI1NiJ9.Tc9IQuUdQ7IaVWORuQOLIpG1emnTikIkzvDOfVnThNU"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/account/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"account",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
