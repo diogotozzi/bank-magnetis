@@ -12,6 +12,6 @@ module FundConcern
       sum -= fund.qty
     end
 
-    return sum
+    return sum.to_f
   end
 end
