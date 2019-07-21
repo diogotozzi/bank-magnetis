@@ -8,8 +8,8 @@
 
 Account.create(
   [
-    {id: "1"},
-    {id: "2"},
+    {id: "1", name: "John Doe", password: "123456", token: "eyJhbGciOiJIUzI1NiJ9.IlkyNjR5anlPeG1mWWVkYksi.Tc9IQuUdQ7IaVWORuQOLIpG1emnTikIkzvDOfVnThNU"},
+    {id: "2", name: "Bob Doe", password: "123456", token: "IlkyNjR5anlPeG1mWWVkYksi.eyJhbGciOiJIUzI1NiJ9.Tc9IQuUdQ7IaVWORuQOLIpG1emnTikIkzvDOfVnThNU"},
   ]
 )
 

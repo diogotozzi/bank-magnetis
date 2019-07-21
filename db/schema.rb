@@ -17,6 +17,9 @@ ActiveRecord::Schema.define() do
 
   create_table "accounts", id: false, force: :cascade do |t|
     t.integer "id"
+    t.string "name"
+    t.string "password"
+    t.string "token"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
