@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "842ec3e5-b566-49e0-a3dc-e8a6d0e62e20",
+		"_postman_id": "68f49b07-f0a2-49c9-9993-9bd055a885e9",
 		"name": "bank",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -21,13 +21,14 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:3000/account/2",
+					"raw": "http://localhost:3000/api/account/2",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
+						"api",
 						"account",
 						"2"
 					]
@@ -51,13 +52,14 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:3000/account/1",
+					"raw": "http://localhost:3000/api/account/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
+						"api",
 						"account",
 						"1"
 					]
@@ -102,13 +104,14 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/transfer",
+					"raw": "http://localhost:3000/api/transfer",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
+						"api",
 						"transfer"
 					]
 				}
@@ -147,20 +150,15 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/transfer",
+					"raw": "http://localhost:3000/api/transfer",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
+						"api",
 						"transfer"
-					],
-					"query": [
-						{
-							"key": "",
-							"value": ""
-						}
 					]
 				}
 			},
@@ -176,13 +174,14 @@
 					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:3000/account?account_id=003&name=Mary Doe&password=123456",
+					"raw": "http://localhost:3000/api/account?account_id=003&name=Mary Doe&password=123456",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
+						"api",
 						"account"
 					],
 					"query": [
@@ -240,20 +239,15 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:3000/transfer",
+					"raw": "http://localhost:3000/api/transfer",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
+						"api",
 						"transfer"
-					],
-					"query": [
-						{
-							"key": "",
-							"value": ""
-						}
 					]
 				}
 			},
