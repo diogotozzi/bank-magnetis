@@ -4,7 +4,7 @@ This is the Bank API Project. This repo is the API for the mobile app for Accoun
 
 It's written in Ruby on Rails 5.2 + Postgresql 11.4 + Nginx 1.17.1. It uses Docker based on Alpine Linux.
 
-## Starting the environments
+## Get started!
 
 > **Install:** Docker, Docker Compose 3.7 and [Postman](https://www.getpostman.com/downloads/)!
 
@@ -28,7 +28,7 @@ To run all unit, functional and integration tests:
 
 `docker-compose run ruby rails test -p`
 
-## Communicating with API
+## API Flow
 
 We have three API endpoints with our bank: `/api/ping`, `/api/account` and `/api/transfer`
 
@@ -40,8 +40,6 @@ We have three API endpoints with our bank: `/api/ping`, `/api/account` and `/api
 |Create accaount |`/api/account`               |                             |
 |Check account   |                 |`/api/account/:id`               |
 |Transfer money  |`/api/transfer`   |                             |
-
-## API Flow
 
 ### Ping application [GET]
 Make a GET request to `/` or `/api/ping` to test if the framework is working
