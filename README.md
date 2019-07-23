@@ -8,8 +8,12 @@ It's written in Ruby on Rails 5.2 + Postgresql 11.4. It also uses Docker.
 
 > **Install:** Docker, Docker Compose 3.7 and [Postman](https://www.getpostman.com/downloads/)!
 
-- Clone this repo in your computer
-- Run `docker-compose up -d`
+Run the following commands on your terminal:
+
+- `git clone git@gitlab.com:diogotozzi/bank.git`
+- `cd bank`
+- `echo "SomeStrangeHashHere" > config/master.key`
+- `docker-compose up -d`
 
 Wait Docker download all images and run, then execute the following Rake command:
 
