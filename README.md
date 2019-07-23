@@ -13,7 +13,7 @@ Run the following commands on your terminal:
 - `git clone git@gitlab.com:diogotozzi/bank.git`
 - `cd bank`
 - `echo "SomeStrangeHashHere" > config/master.key`
-- `docker-compose up`
+- `docker-compose up -d`
 
 Wait Docker download all images and run, then execute the following Rake command:
 
@@ -22,6 +22,11 @@ Wait Docker download all images and run, then execute the following Rake command
 This should connect to Postgres, create the databases, tables and populate then with some data.
 
 And that is! You should be able to access the API at [http://localhost:3000](http://localhost:3000)
+
+## Tests
+To run all unit, functional and integration tests:
+
+`docker-compose run ruby rails test -p`
 
 ## Communicating with API
 
@@ -76,11 +81,6 @@ Make a POST request to `/api/transfer` with the following parameters if you wish
 - password - string (your password)
 
 Then you should receive a JSON 200 response with confirmation, *if you have funds*!
-
-## Tests
-To run all unit, functional and integration tests:
-
-`docker-compose run ruby rails test -p`
 
 ## TODO
 
