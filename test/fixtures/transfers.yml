@@ -1,0 +1,24 @@
+transfer_1:
+  from_account_id: 1
+  to_account_id: 1
+  qty: 10.00
+
+transfer_2:
+  from_account_id: 1
+  to_account_id: 1
+  qty: 7.20
+
+transfer_3:
+  from_account_id: 2
+  to_account_id: 2
+  qty: 5.00
+
+transfer_4:
+  from_account_id: 2
+  to_account_id: 2
+  qty: 9.00
+
+transfer_5:
+  from_account_id: 2
+  to_account_id: 1
+  qty: 3.00

@@ -1,0 +1,11 @@
+account_1:
+  id: 1
+  name: John Doe
+  password: "$2a$12$uA.APQ8nbDomQ6bPH.XBeuXs7GWnn/DLuBi2LBRRESHjbyJlF/eGi"
+  token: "eyJhbGciOiJIUzI1NiJ9.IlkyNjR5anlPeG1mWWVkYksi.Tc9IQuUdQ7IaVWORuQOLIpG1emnTikIkzvDOfVnThNU"
+
+account_2:
+  id: 2
+  name: Bob Doe
+  password: "$2a$12$uA.APQ8nbDomQ6bPH.XBeuXs7GWnn/DLuBi2LBRRESHjbyJlF/eGi"
+  token: "IlkyNjR5anlPeG1mWWVkYksi.eyJhbGciOiJIUzI1NiJ9.Tc9IQuUdQ7IaVWORuQOLIpG1emnTikIkzvDOfVnThNU"
