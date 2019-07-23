@@ -2,7 +2,7 @@
 
 This is the Bank API Project. This repo is the API for the mobile app for Accounts and Transfers.
 
-It's written in Ruby on Rails 5.2 + Postgresql 11.4. It also uses Docker.
+It's written in Ruby on Rails 5.2 + Postgresql 11.4 + Nginx 1.17.1. It uses Docker based on Alpine Linux.
 
 ## Starting the environments
 
@@ -13,11 +13,11 @@ Run the following commands on your terminal:
 - `git clone git@gitlab.com:diogotozzi/bank.git`
 - `cd bank`
 - `echo "SomeStrangeHashHere" > config/master.key`
-- `docker-compose up -d`
+- `docker-compose up`
 
 Wait Docker download all images and run, then execute the following Rake command:
 
-- `docker-compose run webserver rails db:setup`
+- `docker-compose run ruby rails db:setup`
 
 This should connect to Postgres, create the databases, tables and populate then with some data.
 
@@ -80,7 +80,7 @@ Then you should receive a JSON 200 response with confirmation, *if you have fund
 ## Tests
 To run all unit, functional and integration tests:
 
-`docker-compose run webserver rails test -p`
+`docker-compose run ruby rails test -p`
 
 ## TODO
 
@@ -88,5 +88,4 @@ There is a bunch of things to do, feel free to send PR to us! 🙈
 
 3. Run project in Kubernetes
 4. Tune up Rails
-5. Improve security
 6. and more ...

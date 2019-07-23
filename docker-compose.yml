@@ -1,23 +1,33 @@
 version: "3.7"
 services:
-  webserver:
-    build: .
-    container_name: "webserver"
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+  ruby:
+    build:
+      context: .
+      dockerfile: ./docker/ruby/Dockerfile
+    container_name: "ruby"
     volumes:
       - .:/app
-    ports:
-      - "3000:3000"
-    depends_on:
-      - database
     networks:
-        - app-network
+      - app-network
   database:
     image: postgres:11.4
     environment:
       - PG_TRUST_LOCALNET=true
     networks:
-        - app-network
+      - app-network
+  webserver:
+    build:
+      context: .
+      dockerfile: ./docker/nginx/Dockerfile
+    container_name: "webserver"
+    volumes:
+      - .:/app
+    ports:
+      - "3000:80"
+    # depends_on:
+    #   - ruby
+    networks:
+      - app-network
 networks:
   app-network:
     name: app-network
